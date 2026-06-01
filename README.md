@@ -10,13 +10,12 @@ This project demonstrates network automation using Python and Netmiko to configu
 - **Python 3** + **Netmiko** — Automation library
 
 ## Network Topology
-Your PC → Cloud (VMnet1) → MikroTik-CHR-1 → PC1 (VPCS)
-192.168.111.200
 
-
+GNS.png
 ## Scripts
 
 ### 1. mikrotik_test.py
+vm.png
 Connects to MikroTik and reads IP address table.
 
 ### 2. mikrotik_backup.py
@@ -26,6 +25,7 @@ Backs up router configuration to a text file automatically with date and time.
 Automatically configures router hostname and DNS servers.
 
 ## How to Run
+out.png
 ```bash
 pip install netmiko
 python mikrotik_test.py
