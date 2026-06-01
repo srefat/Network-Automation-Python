@@ -1,42 +1,45 @@
 # Network Automation with Python and MikroTik
 
-## Project Overview
-This project demonstrates network automation using Python and Netmiko to configure and manage MikroTik routers running in GNS3 with VMware.
+## What This Project Does
+Python automation scripts that connect to a MikroTik router via SSH and automatically collect network data, backup configurations, and configure router settings — eliminating manual CLI work.
 
-## Lab Setup
-- **GNS3** — Network simulation platform
-- **VMware Workstation Pro** — Virtualization platform
-- **MikroTik CHR 7.23** — Virtual router
-- **Python 3** + **Netmiko** — Automation library
+## Problem It Solves
+Network engineers manually SSH into devices one by one to check interfaces, IP addresses, and router information. These scripts automate the entire process in seconds.
+
+## Technologies Used
+- Python 3.14
+- Netmiko library
+- MikroTik CHR 7.23 (RouterOS)
+- GNS3 with VMware Workstation Pro
+- SSH protocol
+
+## How It Works
+1. Script SSHs into MikroTik router automatically
+2. Pulls IP address table
+3. Pulls interface status
+4. Pulls router identity
+5. Saves everything to a backup file with date and time
 
 ## Network Topology
-PC → Cloud (VMnet1) → MikroTik-CHR-1 → PC1 (VPCS)
-192.168.111.200
-GNS.png
-## Scripts
+![Network Topology](GNS.png)
 
-### 1. mikrotik_test.py
-vm.png
-Connects to MikroTik and reads IP address table.
+## Script Output
+![Script Output](out.png)
 
-### 2. mikrotik_backup.py
-Backs up router configuration to a text file automatically with date and time.
+## Results
+- Connected to MikroTik router running in GNS3
+- Extracted live network data automatically
+- Generated automated backup report
+- Configured router hostname and DNS automatically
 
-### 3. mikrotik_configure.py
-Automatically configures router hostname and DNS servers.
+## Files
+- `mikrotik_test.py` — Connects and reads router info
+- `mikrotik_backup.py` — Auto backup router configuration
+- `mikrotik_configure.py` — Auto configure router settings
+- `backup_2026-06-01.txt` — Auto generated backup report
 
-## How to Run
-out.png
-```bash
+## How To Run
 pip install netmiko
 python mikrotik_test.py
 python mikrotik_backup.py
 python mikrotik_configure.py
-```
-
-## Skills Demonstrated
-- Python scripting
-- SSH automation with Netmiko
-- Network device configuration
-- GNS3 lab setup
-- VMware virtualization
