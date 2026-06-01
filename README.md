@@ -10,7 +10,8 @@ This project demonstrates network automation using Python and Netmiko to configu
 - **Python 3** + **Netmiko** — Automation library
 
 ## Network Topology
-
+PC → Cloud (VMnet1) → MikroTik-CHR-1 → PC1 (VPCS)
+192.168.111.200
 GNS.png
 ## Scripts
 
