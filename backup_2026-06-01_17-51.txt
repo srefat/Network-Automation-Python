@@ -1,0 +1,18 @@
+=== MikroTik Backup ===
+Date: 2026-06-01_17-51
+
+--- Identity ---
+name: CHR
+
+--- IP Addresses ---
+Columns: ADDRESS, NETWORK, INTERFACE, VRF
+# ADDRESS             NETWORK        INTERFACE  VRF 
+0 192.168.111.200/24  192.168.111.0  ether2     main
+
+--- Interfaces ---
+Flags: R - RUNNING
+Columns: NAME, TYPE, ACTUAL-MTU, MAC-ADDRESS
+#   NAME    TYPE      ACTUAL-MTU  MAC-ADDRESS      
+0 R ether1  ether           1500  0C:5F:7E:E4:00:00
+1 R ether2  ether           1500  0C:5F:7E:E4:00:01
+2 R lo      loopback       65536  00:00:00:00:00:00
